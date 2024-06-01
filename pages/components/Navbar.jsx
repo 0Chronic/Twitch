@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '../public.assets/logo.png'
+
+
 
 
 
@@ -12,9 +13,9 @@ const Navbar = () => {
 
         <div className='flex grow items-center justify-start'>
       <Link href='/'>
-    <a>
-        <Image src={Logo} alt='/' />
-    </a>
+   
+        <Image src="/logo.png" alt='/' width={200} height={200} />
+   
       </Link>
         </div>
         {/*Middle*/}
