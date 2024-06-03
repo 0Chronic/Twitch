@@ -1,8 +1,16 @@
-import React from 'react'
+import React,{Fragment} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '/public/assets/logo.png'
+import {BsSearch, BsThreeDotsVertical} from 'react-icons/bs'
 
+
+import  {Menu,Transition} from '@headlessui/react'
+
+
+function classNames(...classes){
+  return classes.filter(Boolean).join('')
+}
 
 
 
@@ -94,6 +102,17 @@ const Navbar = () => {
       </div>
         </div>
         {/*Middle*/}
+
+         <div className='hidden md:flex items-center justify-center'>
+          <div>
+            <div>
+              <input type='text' className='bg-transparent border-none text-white focus:outline-none' />
+            </div>
+            <div>
+              <BsSearch  />
+            </div>
+          </div>
+         </div>
         {/*Right Side*/}
 
     </div>
