@@ -104,16 +104,22 @@ const Navbar = () => {
         {/*Middle*/}
 
          <div className='hidden md:flex items-center justify-center'>
-          <div>
+          <div className='bg-gray-500 text-white flex justify-center items-center max-w-[400px] m-auto p-2 rounded-2xl'>
             <div>
               <input type='text' className='bg-transparent border-none text-white focus:outline-none' />
             </div>
             <div>
               <BsSearch  />
+              
             </div>
           </div>
          </div>
         {/*Right Side*/}
+        <div className='hidden md:flex grow items-center justify-end'> 
+
+        </div>
+
+
 
     </div>
   )
