@@ -2,7 +2,8 @@ import React,{Fragment} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '/public/assets/logo.png'
-import {BsSearch, BsThreeDotsVertical} from 'react-icons/bs'
+import {BsPerson, BsSearch, BsThreeDotsVertical} from 'react-icons/bs'
+import {AiOutlineMenu , AiOutlineClose} from 'react-icons/ai'
 
 
 import  {Menu,Transition} from '@headlessui/react'
@@ -103,10 +104,10 @@ const Navbar = () => {
         </div>
         {/*Middle*/}
 
-         <div className='hidden md:flex items-center justify-center'>
-          <div className='bg-gray-500 text-white flex justify-center items-center max-w-[400px] m-auto p-2 rounded-2xl'>
+         <div className='hidden md:flex grow-[2] items-center justify-center'>
+          <div className='bg-gray-500 text-white flex justify-between items-center max-w-[400px] w-full  m-auto p-2 rounded-2xl'>
             <div>
-              <input type='text' className='bg-transparent border-none text-white focus:outline-none' />
+              <input type='text' className='bg-transparent border-none text-white focus:outline-none' placeholder='Search' />
             </div>
             <div>
               <BsSearch  />
@@ -116,11 +117,61 @@ const Navbar = () => {
          </div>
         {/*Right Side*/}
         <div className='hidden md:flex grow items-center justify-end'> 
-
+        <div className='flex items-center '>
+          <Link href='/'>
+          <button className='px-4 py-[6px] rounded-lg font-bold bg-[#9147ff] mr-2'>
+            Accoucnt
+          </button>
+          </Link>
+          <BsPerson size={30} />
         </div>
 
 
+        </div>
 
+        {/*Humburger Menu*/}
+        <div className='block md:hidden cursor-pointer'>
+          <AiOutlineMenu size={25} />
+        </div>
+
+        
+
+
+    {/*Mobile Menu*/}
+    <div className='fixed top-0 left-0 w-full h-screen bg-[#0e0e10] flex justify-center items-center easi-in duration-300 '>
+      <ul className='text-center'>
+        <li className='p-4 text-3xl font-bold'>
+          <Link href='/'>
+          Home
+          </Link>
+        </li>
+
+
+        <li className='p-4 text-3xl font-bold'>
+          <Link href='/'>
+          Live Channels
+          </Link>
+        </li>
+
+
+        <li className='p-4 text-3xl font-bold'>
+          <Link href='/'>
+          Top Categories
+          </Link>
+        </li>
+
+
+
+        <li className='p-4 text-3xl font-bold'>
+          <Link href='/'>
+          Account
+          </Link>
+        </li>
+
+
+      </ul>
+
+    </div>
     </div>
   )
 }
