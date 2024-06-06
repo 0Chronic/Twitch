@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react'
+import React,{Fragment, useState} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '/public/assets/logo.png'
@@ -17,6 +17,14 @@ function classNames(...classes){
 
 
 const Navbar = () => {
+
+  const [nav, setNav] = useState(false)
+
+  const handleNav = () => {
+    setNav(!nav)
+  }
+
+
   return (
     <div className='fixed h-14 w-full flex flex-norap items-center p-4 bg-[#0e0e10] mb-[2px] z-10'>
         {/*Left Side */}
@@ -130,15 +138,18 @@ const Navbar = () => {
         </div>
 
         {/*Humburger Menu*/}
-        <div className='block md:hidden cursor-pointer'>
-          <AiOutlineMenu size={25} />
+        <div onClick={handleNav} className='block md:hidden z-10 cursor-pointer'>
+        {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
         </div>
 
         
 
 
     {/*Mobile Menu*/}
-    <div className='fixed top-0 left-0 w-full h-screen bg-[#0e0e10] flex justify-center items-center easi-in duration-300 '>
+    <div className={
+      nav ? ' md:hidden fixed top-0 left-0 w-full h-screen bg-[#0e0e10] flex justify-center items-center easi-in duration-300 '
+      : 'md:hidden fixed top-[-100%] left-0 w-full h-screen bg-[#0e0e10] flex justify-center items-center easi-in duration-300 '
+    }>
       <ul className='text-center'>
         <li className='p-4 text-3xl font-bold'>
           <Link href='/'>
@@ -167,11 +178,14 @@ const Navbar = () => {
           Account
           </Link>
         </li>
+        <h1>Greeting</h1>
 
 
       </ul>
 
     </div>
+
+
     </div>
   )
 }
