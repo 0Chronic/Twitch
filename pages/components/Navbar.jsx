@@ -178,8 +178,7 @@ const Navbar = () => {
           Account
           </Link>
         </li>
-        <h1>Greeting</h1>
-        <h2>Nothing change again</h2>
+     
 
 
       </ul>
