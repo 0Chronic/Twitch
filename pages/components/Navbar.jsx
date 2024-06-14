@@ -178,6 +178,8 @@ const Navbar = () => {
           Account
           </Link>
         </li>
+
+        <h1>cheat</h1>
      
 
 
