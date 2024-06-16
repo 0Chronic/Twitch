@@ -126,7 +126,7 @@ const Navbar = () => {
         {/*Right Side*/}
         <div className='hidden md:flex grow items-center justify-end'> 
         <div className='flex items-center '>
-          <Link href='/'>
+          <Link href='/account'>
           <button className='px-4 py-[6px] rounded-lg font-bold bg-[#9147ff] mr-2'>
             Accoucnt
           </button>
@@ -174,7 +174,7 @@ const Navbar = () => {
 
 
         <li className='p-4 text-3xl font-bold'>
-          <Link href='/'>
+          <Link href='/account'>
           Account
           </Link>
         </li>
