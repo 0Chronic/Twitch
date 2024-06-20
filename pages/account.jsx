@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import {FaGithub} from 'react-icons/fa'
+import Image from 'next/image'
 
 const account = () => {
     const { data: session } = useSession()
@@ -11,7 +12,7 @@ const account = () => {
        <h2 className='text-2xl font-bold'>Welcome , {session.user.name}</h2>
        <p className='py-4'>Signed in as {session.user.email}</p>
        <div className='py-4 m-auto'>
-        <img src={session.user.image} />
+      <Image src={session.user.image} alt="/" width="100" height='100' />
 
        </div>
         <button onClick={() => signOut()}>Sign out</button>
