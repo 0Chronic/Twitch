@@ -12,10 +12,10 @@ const account = () => {
        <h2 className='text-2xl font-bold'>Welcome , {session.user.name}</h2>
        <p className='py-4'>Signed in as {session.user.email}</p>
        <div className='py-4 m-auto'>
-      <Image src={session.user.image} alt="/" width="100" height='100' />
+      <Image src={session.user.image} className='rounded-full' alt="/" width="100" height='100' />
 
        </div>
-        <button onClick={() => signOut()}>Sign out</button>
+        <button className='flex items-center justify-center p-3 bg-gray-600 border border-gray-600' onClick={() => signOut()}>Sign out</button>
       </div>
     )
   }
