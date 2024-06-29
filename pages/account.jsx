@@ -25,6 +25,8 @@ const account = () => {
      <p className='py-4' >Choose the account you want to sign in with.</p>
       <button className='flex items-center justify-center p-3 bg-gray-600 border border-gray-600 my-2' onClick={() => signIn()}><FaGithub className='mr-2' />Sign in with<span className='font-bold pl-1'>Github</span></button>
     </div>
+
+
   )
 
 }
