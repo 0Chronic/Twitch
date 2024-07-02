@@ -3,6 +3,7 @@ import LiveChannel from './LiveChannel'
 import LiveChannelItem from './LiveChannelItem'
 import Hero from './Hero'
 import IconBar from './IconBar'
+import Categories from './Categories'
 
 const Main = () => {
   return (
@@ -10,6 +11,7 @@ const Main = () => {
       <Hero />
       <LiveChannel />
       <IconBar />
+      <Categories />
      
     </div>
   )
